@@ -1,11 +1,11 @@
-@import "bootstrap/scss/bootstrap";
-
-<div class="container col-6 p-3">
+<div class="">
   <%= form_for(@article) do |f| %>
     <%= f.label :title %>
     <%= f.text_field :title %>
-    <%= f.label :content %>
-    <%= f.text_field :content %>
+    <div class="my-content">
+      <%= f.label :content %>
+      <%= f.text_field :content%>
+    </div>
     <%= f.submit %>
   <% end %>
 </div>

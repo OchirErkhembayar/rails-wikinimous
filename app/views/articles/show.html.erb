@@ -1,5 +1,10 @@
-<h1><%= @article.title %></h1>
+<h5 class="border-bottom border-1"><%= @article.title %>
+<%= link_to edit_article_path do %>
+  <i class="fas fa-edit"></i>
+<% end %>
+<%= link_to article_path(@article), method: :delete, data: { confirm: "Are you sure?" } do %>
+  <i class="fas fa-trash-alt"></i>
+<% end %></h5>
+
+
 <p><%= @article.content %></p>
-<%= link_to "edit", edit_article_path(@article) %>
-<%= link_to "articles", articles_path %>
-<%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?" }  %>
